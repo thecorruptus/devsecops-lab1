@@ -14,7 +14,7 @@ jobs:
       - name: Ejecutar escaneo Semgrep (Reglas OWASP y JavaScript)
         run: |
           docker run --rm -v "${{ github.workspace }}:/src" semgrep/semgrep \
-            semgrep scan --config=p/javascript --config=p/secrets --metrics=off
+            semgrep scan --config=p/javascript --config=p/secrets --metrics=off --error
   container-security:
     name: SCA - Escaneo de Imagen Docker (Trivy)
     runs-on: ubuntu-latest
