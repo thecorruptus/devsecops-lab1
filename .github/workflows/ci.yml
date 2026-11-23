@@ -8,8 +8,6 @@ jobs:
   sast-semgrep:
     name: SAST - Analisis Estatico (Semgrep)
     runs-on: ubuntu-latest
-    container:
-      image: semgrep/semgrep
     steps:
       - name: Checkout del codigo fuente
         uses: actions/checkout@v4
